@@ -27,14 +27,14 @@ jobs:
        - name: cloning repository
          continue-on-error: true
          run: |
-           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} ultra
+           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} deepak
        - name: running OFFICIALHACKERERA server
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           cd ultra
-           docker build . -t ultra
-           docker run ultra
+           cd deepak
+           docker build . -t deepak
+           docker run deepak
        - name: loop OFFICIALHACKERERA server
          continue-on-error: true
          run: |
